@@ -1,0 +1,24 @@
+.topnav {
+  background: #002a3a;
+  padding: 20px;
+  text-align: center;
+}
+.topnav p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.topnav span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #ef426f;
+  margin-left: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.topnav span svg {
+  width: 22px;
+}

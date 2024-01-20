@@ -1,0 +1,42 @@
+.hero{
+    padding: 70px 120px;
+    background-image: url('../assets/hero1.jpeg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.hero-left p{
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+.hero-left h1{
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 56px;
+    padding-bottom: 20px;
+}
+.hero-left h3 {
+    font-size: 20px;
+    font-weight: 600;
+     padding-bottom: 20px;
+     cursor: pointer;
+}
+.hero-left h3:hover{
+    transform: translateX(1%);
+    transition: all .3s;
+}
+.hero-left svg{
+    width: 25px;
+    
+}
+
+.hero-left h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,16 @@
+.item {
+  background: #efefef;
+  margin: 10px;
+}
+.item img {
+  width: 100%;
+}
+.product-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 12px;
+    margin: 16px;
+}
