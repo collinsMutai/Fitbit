@@ -14,7 +14,7 @@ const ShopContextProvider = ({ children }) => {
   const [all_products, setAllProducts] = useState([]);
   const [toggle, setToggle] = useState(false);
   const [cartItems, setCartItems] = useState(getCart());
-  console.log(cartItems);
+  const [items, setItems] = useState(0);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -22,6 +22,25 @@ const ShopContextProvider = ({ children }) => {
 
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  };
+
+
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    let number_of_items = 0; 
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = all_products.find(
+          (product) => product.id === Number(item)
+        );
+        totalAmount += itemInfo.price * cartItems[item];
+        number_of_items += cartItems[item];
+        setItems(number_of_items);
+        
+      }
+    }
+    
+    return totalAmount;
   };
 
   useEffect(() => {
@@ -32,7 +51,16 @@ const ShopContextProvider = ({ children }) => {
 
   return (
     <ShopContext.Provider
-      value={{ all_products, toggle, setToggle, addToCart, removeFromCart }}
+      value={{
+        all_products,
+        toggle,
+        setToggle,
+        cartItems,
+        addToCart,
+        removeFromCart,
+        getTotalCartAmount,
+        items
+      }}
     >
       {children}
     </ShopContext.Provider>

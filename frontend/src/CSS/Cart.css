@@ -5,8 +5,9 @@
   top: 0;
   left: 700px;
   height: 100%;
-  width: 100%;
+  max-width: 600px;
   background-color: #f4f4f4;
+  padding: 10px 60px;
 }
 .close-btn {
   display: none;
@@ -19,7 +20,62 @@ button {
 button svg {
   color: #ee3d6e;
   position: relative;
-  top: 11px;
-  left: 500px;
+  top: 5px;
+  left: 450px;
   height: 42px;
+}
+.cart-contents div h3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22px;
+  color: #002a3a;
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: .5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.cart-item-details{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  
+}
+.cart-item-details img{
+  width: 60px;
+}
+.cart-item-details div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+}
+.cart-item-details div a{
+    font-size: 14px;
+  letter-spacing: .8px;
+  line-height: 1.29;
+  color: #002a3a;
+  
+}
+.cart-item-details div a:hover{
+  color: #ee3d6e;
+  
+}
+.cart-item-details-icons{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 160px;
+}
+.cart-item-details-icons svg{
+  height: 20px;
+}
+.cart-item-details-icons span{
+  border: 1px solid #fff;
+  padding: 4px 15px;
+  background: #fff;
 }
