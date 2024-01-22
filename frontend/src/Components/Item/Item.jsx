@@ -3,19 +3,23 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
-  console.log(product);
+  
   return (
-    <div className="item">
+    <Link
+      onClick={window.scrollTo(0, 0)}
+      to={`/product/${product.id}`}
+      className="item"
+      style={{ textDecoration: "none" }}
+    >
       <div>
-        <Link to={`/product/${product.id}`}>
         <img src={product.image} alt="" />
-        </Link>
         <div className="product-data">
-        <h3>{product.name}</h3>
-        <p>{product.price}</p>
+          <h3>{product.name}</h3>
+          <p>{product.price}</p>
+          <button className="item-btn">Shop</button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

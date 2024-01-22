@@ -1,0 +1,25 @@
+.content {
+  z-index: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 700px;
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.close-btn {
+  display: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: #f4f4f4;
+}
+button svg {
+  color: #ee3d6e;
+  position: relative;
+  top: 11px;
+  left: 500px;
+  height: 42px;
+}

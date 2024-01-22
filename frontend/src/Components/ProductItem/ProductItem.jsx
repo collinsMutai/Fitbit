@@ -3,7 +3,6 @@ import "./ProductItem.css";
 import Item from "../Item/Item";
 
 const ProductItem = ({ products }) => {
-  console.log(products);
 
   return (
     <div className="product-item">
