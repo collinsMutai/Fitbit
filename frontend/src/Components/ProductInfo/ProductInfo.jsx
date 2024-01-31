@@ -7,7 +7,7 @@ import { ShopContext } from "../../Context/ShopContext";
 const ProductInfo = ({ product }) => {
   const { toggle, setToggle, addToCart } = useContext(ShopContext);
   function handleAddToCart (){
-    setToggle(true);
+    
     addToCart(Number(product.id))
   }
 

@@ -52,6 +52,8 @@ li:hover {
 }
 .navbar-right-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   color: "#002a3a";
 }

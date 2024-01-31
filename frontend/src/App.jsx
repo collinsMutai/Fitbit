@@ -2,16 +2,14 @@ import "./App.css";
 import Home from "./Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Products from "./Products";
-import Topnav from "./Components/Topnav/Topnav";
 import Navbar from "./Components/Navbar/Navbar";
-import ShopContextProvider from "./Context/ShopContext";
 import ProductDetail from "./ProductDetail";
-import Cart from "./Cart"
+import Cart from "./Cart";
+import LoginSignup from "./Components/LoginSignup/LoginSignup";
 
 function App() {
   return (
     <BrowserRouter>
-      <Topnav />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +17,8 @@ function App() {
         <Route path="/product" element={<ProductDetail />}>
           <Route path=":productId" element={<ProductDetail />} />
         </Route>
-        <Route path="/cart" element={<Cart />}/>
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/loginsignup" element={<LoginSignup />} />
       </Routes>
     </BrowserRouter>
   );

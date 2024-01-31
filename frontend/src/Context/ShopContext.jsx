@@ -15,6 +15,7 @@ const ShopContextProvider = ({ children }) => {
   const [toggle, setToggle] = useState(false);
   const [cartItems, setCartItems] = useState(getCart());
   const [items, setItems] = useState(0);
+   const [hide, setHide] = useState(false);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -59,7 +60,9 @@ const ShopContextProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
-        items
+        items,
+        hide,
+        setHide
       }}
     >
       {children}
