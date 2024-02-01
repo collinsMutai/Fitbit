@@ -5,10 +5,11 @@ import Cart from "../../Cart";
 import { ShopContext } from "../../Context/ShopContext";
 
 const ProductInfo = ({ product }) => {
-  const { toggle, setToggle, addToCart } = useContext(ShopContext);
+  const { toggle, setToggle, addToCart,  getTotalCartAmount } = useContext(ShopContext);
   function handleAddToCart (){
     
     addToCart(Number(product.id))
+      getTotalCartAmount();
   }
 
   return (

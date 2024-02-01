@@ -11,11 +11,19 @@ const Cart = () => {
     addToCart,
     removeFromCart,
     getTotalCartAmount,
-    items,
+    getTotalCartItems,
+    showCart,
+    setShowCart,
   } = useContext(ShopContext);
   function closeHandler() {
     setClose(true);
     setToggle(false);
+
+    if (setShowCart) {
+      setShowCart(false);
+    } else {
+      setShowCart(true);
+    }
   }
 
   return (
@@ -40,7 +48,7 @@ const Cart = () => {
 
         <div>
           <h3>
-            Basket summary ({items})
+            Basket summary ({getTotalCartItems()})
             <span>${getTotalCartAmount()}</span>
           </h3>
           {all_products.map(

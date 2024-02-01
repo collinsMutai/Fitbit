@@ -15,7 +15,8 @@ const ShopContextProvider = ({ children }) => {
   const [toggle, setToggle] = useState(false);
   const [cartItems, setCartItems] = useState(getCart());
   const [items, setItems] = useState(0);
-   const [hide, setHide] = useState(false);
+  const [hide, setHide] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -25,24 +26,29 @@ const ShopContextProvider = ({ children }) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
-
   const getTotalCartAmount = () => {
     let totalAmount = 0;
-    let number_of_items = 0; 
+    let number_of_items = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo = all_products.find(
           (product) => product.id === Number(item)
         );
         totalAmount += itemInfo.price * cartItems[item];
-        number_of_items += cartItems[item];
-        setItems(number_of_items);
-        
       }
     }
-    
     return totalAmount;
   };
+
+  const getTotalCartItems = () => {
+    let totalItem = 0
+    for (const item in cartItems){
+      if(cartItems[item] > 0){
+        totalItem += cartItems[item]
+      }
+    }
+    return totalItem
+  }
 
   useEffect(() => {
     if (products) {
@@ -60,9 +66,11 @@ const ShopContextProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
-        items,
+        getTotalCartItems,
         hide,
-        setHide
+        setHide,
+        showCart,
+        setShowCart,
       }}
     >
       {children}

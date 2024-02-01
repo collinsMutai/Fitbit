@@ -60,3 +60,11 @@ li:hover {
 .navbar-right svg {
   width: 30px;
 }
+.navbar-right-icons span{
+  position: absolute;
+  top: 106px;
+  right: 115px;
+  color: #EF3D6F;
+  font-size: 14px;
+  font-weight: 500;
+}
