@@ -10,6 +10,7 @@ const Cart = () => {
     all_products,
     addToCart,
     removeFromCart,
+    deleteFromCart,
     getTotalCartAmount,
     getTotalCartItems,
     showCart,
@@ -63,7 +64,9 @@ const Cart = () => {
                     <p>{e.name}</p>
                     <div>
                       <p>${e.price * cartItems[e.id]}</p>
-                      <a href="">Remove</a>
+                      <p className="removeBtn" onClick={() => deleteFromCart(e.id)}>
+                        Remove
+                      </p>
                     </div>
                   </div>
                   <div className="cart-item-details-icons">

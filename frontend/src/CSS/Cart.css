@@ -39,7 +39,7 @@ button svg {
 .cart-item-details{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   padding-top: 20px;
   
@@ -54,14 +54,15 @@ button svg {
   gap: 10px;
 
 }
-.cart-item-details div a{
+.cart-item-details div .removeBtn{
     font-size: 14px;
   letter-spacing: .8px;
   line-height: 1.29;
   color: #002a3a;
+  text-decoration: underline;
   
 }
-.cart-item-details div a:hover{
+.cart-item-details div .removeBtn:hover{
   color: #ee3d6e;
   
 }

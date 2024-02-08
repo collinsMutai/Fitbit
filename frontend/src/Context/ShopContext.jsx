@@ -26,6 +26,10 @@ const ShopContextProvider = ({ children }) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
+  const deleteFromCart = (itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: 0 }));
+  };
+
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     let number_of_items = 0;
@@ -41,14 +45,14 @@ const ShopContextProvider = ({ children }) => {
   };
 
   const getTotalCartItems = () => {
-    let totalItem = 0
-    for (const item in cartItems){
-      if(cartItems[item] > 0){
-        totalItem += cartItems[item]
+    let totalItem = 0;
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        totalItem += cartItems[item];
       }
     }
-    return totalItem
-  }
+    return totalItem;
+  };
 
   useEffect(() => {
     if (products) {
@@ -65,6 +69,7 @@ const ShopContextProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
+        deleteFromCart,
         getTotalCartAmount,
         getTotalCartItems,
         hide,

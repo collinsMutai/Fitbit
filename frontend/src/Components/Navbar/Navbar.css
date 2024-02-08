@@ -3,12 +3,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 35px 120px;
-  background: #D5E4DF;
-  
+  background: #d5e4df;
 }
-.navbar:hover{
+.navbar:hover {
   background: #fff;
-  box-shadow: 0px 25px 20px -20px rgba(0,0,0,0.45);
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
 }
 .logo img {
   width: 150px;
@@ -60,11 +59,54 @@ li:hover {
 .navbar-right svg {
   width: 30px;
 }
-.navbar-right-icons span{
+.navbar-right-icons span {
   position: absolute;
   top: 106px;
   right: 115px;
-  color: #EF3D6F;
+  color: #ef3d6f;
   font-size: 14px;
   font-weight: 500;
+}
+@media (max-width: 425px) {
+  .logo img {
+    width: 80px;
+  }
+  .navbar {
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .navbar-left-links {
+    display: none;
+  }
+  .navbar-right {
+    justify-content: end;
+  }
+  .navbar-right p {
+    font-size: 16px;
+  }
+  .navbar-right-icons span {
+    top: 10px;
+    right: 63px;
+  }
+  .navbar-right-icons .userIcon {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    background: #ef3d6f;
+    position: relative;
+    top: 60px;
+    padding: 50px;
+    color: #fff;
+  }
+}
+@media (min-width: 426px) {
+  .mobile-menu {
+    display: none;
+  }
 }
